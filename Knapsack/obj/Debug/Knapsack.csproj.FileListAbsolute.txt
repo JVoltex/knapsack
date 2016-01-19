@@ -1,0 +1,6 @@
+c:\users\jimbo\documents\visual studio 2015\Projects\Knapsack\Knapsack\bin\Debug\Knapsack.exe.config
+c:\users\jimbo\documents\visual studio 2015\Projects\Knapsack\Knapsack\bin\Debug\Knapsack.exe
+c:\users\jimbo\documents\visual studio 2015\Projects\Knapsack\Knapsack\bin\Debug\Knapsack.pdb
+c:\users\jimbo\documents\visual studio 2015\Projects\Knapsack\Knapsack\obj\Debug\Knapsack.csprojResolveAssemblyReference.cache
+c:\users\jimbo\documents\visual studio 2015\Projects\Knapsack\Knapsack\obj\Debug\Knapsack.exe
+c:\users\jimbo\documents\visual studio 2015\Projects\Knapsack\Knapsack\obj\Debug\Knapsack.pdb
