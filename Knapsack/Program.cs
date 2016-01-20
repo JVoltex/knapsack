@@ -17,9 +17,9 @@ namespace Knapsack
         static void Main(string[] args)
         {
             KnapsackProbrem kp = KnapsackProbrem.MakeProblem(MAXWEIGHT, SHINAMAXWEIGHT, SHINAMAXVALUE, SHINANUM);
-            Solver s_dfs = new DFS(kp);
-            Solver s_mem = new Memorization(kp);
-            Solver s_dyn = new DP(kp);
+            KPSolver s_dfs = new DFS(kp);
+            KPSolver s_mem = new Memorization(kp);
+            KPSolver s_dyn = new DP(kp);
         }
     }
 }

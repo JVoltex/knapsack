@@ -2,14 +2,32 @@
 
 namespace Knapsack
 {
-    internal class Solver
+    internal class KPSolver
     {
-        public readonly KnapsackProbrem kp;
-        public int res_value;
+        protected readonly KnapsackProbrem kp;
+        protected int res_value;
 
-        public Solver(KnapsackProbrem kp)
+        public KPSolver(KnapsackProbrem kp)
         {
             this.kp = kp;
+        }
+
+        private int solve(int shinaId, int weightSlack)
+        {
+            return 0;
+        }
+
+        public int Res_value
+        {
+            get
+            {
+                return res_value;
+            }
+
+            set
+            {
+                res_value = value;
+            }
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Knapsack
 {
-    internal class DP : Solver
+    internal class DP : KPSolver
     {
         private int[,] res;
         public DP(KnapsackProbrem kp) : base(kp)
@@ -24,8 +24,10 @@ namespace Knapsack
             for (int i = kp.shinaList.Length - 1; i >= 0; i--)
                 for (int j = 0; j < res.GetLength(1); j++)
                 {
-                    if (kp.shinaList[i].weight > j) res[i, j] = res[i + 1, j];
-                    else res[i, j] = Math.Max(res[i + 1, j], res[i + 1, j - kp.shinaList[i].weight] + kp.shinaList[i].value);
+                    if (kp.shinaList[i].Weight > j) res[i, j] = res[i + 1, j];
+                    else res[i, j] = Math.Max(
+                        res[i + 1, j], 
+                        res[i + 1, j - kp.shinaList[i].Weight] + kp.shinaList[i].Value);
                 }
             return res[shinaId, weightSlack];
         }

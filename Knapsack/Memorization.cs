@@ -2,7 +2,7 @@
 
 namespace Knapsack
 {
-    internal class Memorization : Solver
+    internal class Memorization : KPSolver
     {
         private int[,] mem;
         public Memorization(KnapsackProbrem kp) : base(kp)
@@ -29,7 +29,8 @@ namespace Knapsack
             {
                 return mem[shinaId, weightSlack];
             }
-            else if (kp.shinaList[shinaId].weight > weightSlack)
+            Shina s = kp.shinaList[shinaId];
+            if (s.Weight > weightSlack)
             {
                 int r = solve(shinaId + 1, weightSlack);
                 mem[shinaId, weightSlack] = r;
@@ -37,11 +38,12 @@ namespace Knapsack
             }
             else
             {
-                int r = Math.Max(solve(shinaId + 1, weightSlack), solve(shinaId + 1, weightSlack - kp.shinaList[shinaId].weight) + kp.shinaList[shinaId].value);
+                int r = Math.Max(
+                    solve(shinaId + 1, weightSlack), 
+                    solve(shinaId + 1, weightSlack - s.Weight) + s.Value);
                 mem[shinaId, weightSlack] = r;
                 return r;
             }
         }
-
     }
 }

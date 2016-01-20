@@ -2,7 +2,7 @@
 
 namespace Knapsack
 {
-    internal class DFS : Solver
+    internal class DFS : KPSolver
     {
         public DFS(KnapsackProbrem kp) : base(kp)
         {
@@ -15,13 +15,16 @@ namespace Knapsack
             {
                 return 0;
             }
-            else if (kp.shinaList[shinaId].weight > weightSlack)
+            Shina s = kp.shinaList[shinaId];
+            if (s.Weight > weightSlack)
             {
                 return solve(shinaId + 1, weightSlack);
             }
             else
             {
-                return Math.Max(solve(shinaId + 1, weightSlack), solve(shinaId+1, weightSlack - kp.shinaList[shinaId].weight) + kp.shinaList[shinaId].value);
+                return Math.Max(
+                    solve(shinaId + 1, weightSlack), 
+                    solve(shinaId + 1, weightSlack - s.Weight) + s.Value);
             }
         }
     }

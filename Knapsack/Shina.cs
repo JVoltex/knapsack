@@ -1,14 +1,42 @@
-﻿namespace Knapsack
+﻿using System;
+
+namespace Knapsack
 {
     internal class Shina
     {
-        public int weight;
-        public int value;
+        private int weight;
+        private int value;
+
+        public int Weight
+        {
+            get
+            {
+                return weight;
+            }
+
+            set
+            {
+                weight = value;
+            }
+        }
+
+        public int Value
+        {
+            get
+            {
+                return value;
+            }
+
+            set
+            {
+                this.value = value;
+            }
+        }
 
         public Shina(int weight, int value)
         {
-            this.weight = weight;
-            this.value = value;
+            this.Weight = weight;
+            this.Value = value;
         }
     }
 }
